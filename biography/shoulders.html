@@ -1,0 +1,250 @@
+<!doctype html>
+<html>
+<head>
+<title>Biography</title>
+<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+<section>
+<h2 id="text"><b><u> ON THE SHOULDERS OF OTHERS</u></b></h2>
+</section>
+<div class="sec" id="sec">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="quote4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="slogan.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="slogan1.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="slogan2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="slogan3.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="slogan4.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="quote4.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="slogan.jpg" style="width:100%" onclick="currentSlide(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="slogan1.jpg" style="width:100%" onclick="currentSlide(3)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="slogan2.jpg" style="width:100%" onclick="currentSlide(4)" >
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="slogan3.jpg" style="width:100%" onclick="currentSlide(5)" >
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="slogan4.jpg" style="width:100%" onclick="currentSlide(6)" >
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<p>Obama is the first Black man to not only be nominated by a major political party but also to win the presidency of the United States. Though Obama was the first to win the office, there were many other notable Black men, and women, who sought the office. US News & World Report compiled this list of just a few of the contenders:
+
+Shirley Chisholm was the first Black woman ever elected to the U.S. Congress and represented the 12th congressional District of New York for seven terms. She ran for the Democratic nomination for president in 1972, becoming the first Black person and the first Black woman to run for the office on a major party ticket, as well as the first woman to win delegates for a presidential nomination by a major party.
+
+Rev. Jesse Jackson ran for president in the Democratic primary in 1984, becoming the second Black person to do so (after Chisholm), winning one-fourth of the votes and one-eighth of the convention delegates before losing the nomination to Walter Mondale. Jackson ran again in 1988 ran again, receiving 1,218 delegate votes but lost the nomination to Michael Dukakis. Though unsuccessful, Jackson's two presidential campaigns laid the groundwork for Obama to become president two decades later.
+
+Lenora Fulani "ran as an independent (in 1988) and was the first Black woman to appear on presidential ballots in all 50 states. She also ran in 1992," US News noted.
+
+Alan Keyes "served in the (Ronald) Reagan administration (and) campaigned for the Republican nomination in 1996 and 2000," according to US News, adding that he "also lost to Barack Obama in their race for a Senate seat in 2004."
+
+Carol Moseley Braun, a U.S. senator, "briefly sought the Democratic presidential nomination in 2004," US News wrote.
+
+Rev. Al Sharpton, a "New York-based activist campaigned for the Democratic presidential nomination" in 2004, US News reported.
+
+Additionally, Frederick Douglass, a North American 19th-century Black activist and advocate for women's rights, ran for president in 1872 on the Equal Rights Party ticket.
+
+Legacy
+A Promised Land
+Amazon
+
+Obama, in his run, campaigned as an agent of change. It may be too early to fully discuss Obama's legacy as of January 2021—more than four years after he left office. Elaine C. Kamarck, the director of the Center for Effective Public Management at the Brookings Institution, a liberal think tank based in Washington, D.C., was not glowing in her review of Obama, published in 2018:
+
+"It becomes clearer every day that Barack Obama, a historic president, presided over a somewhat less than historic presidency. With only one major legislative achievement (Obamacare)—and a fragile one at that—the legacy of Obama’s presidency mainly rests on its tremendous symbolic importance and the fate of a patchwork of executive actions." 6﻿
+But historians note that the very fact that Obama was the first Black man to hold the office of president of the United States, was a huge door-opener for the country. H.W. Brands, a professor of history at the University of Texas at Austin, stated:
+
+"The single undeniable aspect of Obama’s legacy is that he demonstrated that a Black man can become president of the United States. This accomplishment will inform the first line in his obituary and will earn him assured mention in every American history textbook written from now to eternity." 7﻿
+However, there were negative, or unanticipated, consequences of Obama's election as the first Black U.S. president. Several studies have shown that as a result of Obama's election the public's perception of racism in the U.S. dropped, which, in turn, may have made it more difficult to approve funding or gain support for much-needed social programs. A study published in May 2009 in the Journal of Experimental Social Psychology found:
+
+"Americans may also use Obama’s victory as a justification for further legitimizing the current status hierarchy and for blaming Black Americans for their disadvantaged position in society....These justifications may result in the failure to examine structural aspects of society that lead to profound disadvantages for minorities (e.g., failing schools in predominately minority neighborhoods)."
+A similar study, published in Public Opinion Quarterly, in May 2011, stated:
+
+"A representative panel study of Americans interviewed immediately before and after the (2008) election reveals a roughly 10 percent decline in perceptions of racial discrimination. About one quarter of respondents revised their perceptions of discrimination downward."
+Indeed, in the area of race in the United States, Obama has faced criticism that he did not do as much as he should, or could, have. Michelle Alexander in "The New Jim Crow, 10th Anniversary Edition," published in January 2020, said that Obama was:
+
+"...a man who embraced the rhetoric (though not the politics) of the Civil Rights movement.... (and) it sometimes appeared that Obama was reluctant to acknowledge the depth and breadth of the structural changes required to address police violence and the prevailing systems of racial and social control."
+Alexander noted that while Obama was the first sitting president to visit a federal prison and "oversee a drop in the federal prison population" (which she said is disproportionately represented by Black people, particularly Black men), he greatly increased deportations of undocumented immigrants and his administration oversaw a large expansion of facilities to detain these immigrants.
+
+In response to these criticisms, Obama acknowledged the need for reforms in the criminal justice system and on racial equality in general. He told NPR's Steve Inskeep in 2016:
+
+ "I—what I would say is that the Black Lives Matter movement has been hugely important in getting all of America to—to see the challenges in the criminal justice system differently. And I could not be prouder of the activism that has been involved. And it's making a difference."
+But in terms of his own legacy on these issues, Obama argued the importance of understanding political realities when pushing for change:
+
+"I'm constantly reminding young people, who are full of passion, that I want them to keep their passion, but they've got to gird for the fact that it takes a long time to get stuff done in this democracy."
+Other historians note that Obama "brought stability to the economy, to the job market, to the housing market, to the auto industry and to the banks," as Doris Kearns Goodwin, presidential historian and author of bestselling biographies, noted in an article in Time magazine.7﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿ Kearns also said that Obama brought "tremendous progress" to the LGBTQ+ community, and helped initiate an era of cultural change—which is a major legacy in and of itself.</p></body>
+<iframe width="100%" height="1200" src="https://www.youtube.com/embed/x2gRYvcl5Yg?autoplay=1">
+</iframe>
+
+
+</html>
